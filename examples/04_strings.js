@@ -24,4 +24,4 @@ console.log(email.toLowerCase().trim());
 console.log(email.includes('@gmail.com'));//mira si lo incluye en un string
 
 console.log(username.replace('Saul', 'Aida'));/// reemplaza una por otra hay otro metodo que es replace all que cambia todas las ocurrencias
-console.log(email.endsWith('es'));
+console.log(email.endsWith('es'));//ends starst true o false si empeza o acaba con ello
