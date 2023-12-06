@@ -33,3 +33,12 @@ console.log(shoppginbag.sort());
 // tienes filter map reduce
 
 console.log(shoppginbag.includes('TV'));
+
+const matrix = [
+    [1,2,3],
+    [4,5,6],
+    [7,8,9]
+];
+console.log(matrix[1][1]);
+console.log(matrix[1].join('$$')); // te saca o elementos de un array con separadores o no
+console.log(matrix[0].join(' $ '));
