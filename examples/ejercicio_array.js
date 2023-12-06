@@ -22,7 +22,7 @@ let numeros =[];
 
 function add (lista){
     nueva_lista = [];
-    for(i=0 ; i<5; i++){
+    for(let i=0 ; i<5; i++){
         if (i===3){
             nueva_lista.push('keepcoding'); 
         }
