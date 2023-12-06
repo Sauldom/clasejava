@@ -20,8 +20,21 @@ La temperatura en Celsius es: 10°C*/
 
 
 let tempe=parseFloat(prompt ('Ingresa la temperatura: '));
+while (isNaN(tempe)){
+    console.log('El numero introducido no es un numero');
+    tempe=parseFloat(prompt ('Ingresa la temperatura: '));  
+}
 
-let escala= prompt ('Ingresa la escala a la que quieras cambiar tu temperatura (C o K); ');
+let escal= prompt('Ingresa la escala a la que quieras cambiar tu temperatura (C o K); ').toUpperCase();
+console.log(escal);
+console.log(escal!='C');
+while (escal !='C' && escal != 'K'){
+    console.log('Tienes que introducir una C o una K');
+    escal= prompt('Ingresa la escala a la que quieras cambiar tu temperatura (C o K); ').toUpperCase();
+}
+
+//console.log(parseFloat('numero'));
+
 
 function temperatura(temperaturas, escalas){
     let tFinal = 0.0;
@@ -33,7 +46,7 @@ function temperatura(temperaturas, escalas){
     return tFinal;
 
 }
-console.log(temperatura(tempe, escala));
+console.log(`La temperatura es ${temperatura(tempe, escal)} en ${escal}`);
 
 
 

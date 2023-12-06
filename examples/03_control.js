@@ -17,4 +17,21 @@ console.log(age);
 //operadores ternarios
 
 const message = age ===30 ? 'Tienes mi edad':'No tienes mi edad';
-console.log(message)
+console.log(message);
+
+const day = prompt('Que dia de la semana es');
+
+switch (day){
+    case 'Monday':
+        console.log('Clase de JS a las 7');
+        break;
+    case 'Tuesday': 
+        console.log('Clase de JS a las 7');
+        break;
+    case 'Thursday':
+        console.log('Clase de JS a las 7');
+        break;
+    default:
+        console.log('A descansar');
+        break;
+}
