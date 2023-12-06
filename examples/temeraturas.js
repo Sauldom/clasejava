@@ -1,0 +1,42 @@
+/*Ejercicio: Conversor de temperaturas
+
+Escribe un programa que solicite al usuario una temperatura y una escala de temperatura (Celsius o Kelvin) a la que quiera cambiar esa temperatura.
+
+El programa hace 2 preguntas:
+"Ingresa la temperatura:"
+"Ingresa la escala a la que quieras cambiar tu temperatura (C o K):"
+
+Casos para probar:
+
+Ingresa la temperatura 🌡: 0
+Ingresa la escala a la que quieras cambiar tu temperatura (C o K): K
+
+La temperatura en Kelvin es: 273.15K
+
+Ingresa la temperatura 🌡: 283.15
+Ingresa la escala a la que quieras cambiar tu temperatura (C o K): C
+
+La temperatura en Celsius es: 10°C*/
+
+
+let tempe=parseFloat(prompt ('Ingresa la temperatura: '));
+
+let escala= prompt ('Ingresa la escala a la que quieras cambiar tu temperatura (C o K); ');
+
+function temperatura(temperaturas, escalas){
+    let tFinal = 0.0;
+    if (escalas ==='K'){
+        tFinal = temperaturas + 273.15;  
+    }else {
+        tFinal= temperaturas -273.15;
+    }
+    return tFinal;
+
+}
+console.log(temperatura(tempe, escala));
+
+
+
+
+
+
