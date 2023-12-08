@@ -78,7 +78,7 @@ while (index <4){
 
 }
 
-prompt('Esto que es');
+//prompt('Esto que es');
 
 const presents = [];
 while(true){
@@ -89,3 +89,5 @@ while(true){
     presents.push(newPresent);
     console.log(`Lista de regalos ${presents.join(' ')}`);
 }
+
+/// el do while hace la comparacion al final del bucle

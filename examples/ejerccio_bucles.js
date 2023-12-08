@@ -49,12 +49,14 @@ function crearArbol(altura){
     
     for(let i = 0; i<altura ;i++){        
         for (let j =0; j<anchura; j++){            
-            let empieza= (((anchura-1)/2)-j);
-            let acaba = (empieza+j);
-            if (empieza<=j && acaba>=j){
-                arbol += '*'
+            let empieza= (((anchura-1)/2)-i);
+            let acaba = (((anchura-1)/2)+i);
+            //console.log(`empieza ${empieza}`);
+            //console.log(`acaba ${acaba}`);
+            if (empieza>j || j>acaba){
+                arbol += '-'
             }else{
-                arbol+= '-';
+                arbol+= '*';
             }
         }
         arbol = arbol + '\n';
@@ -77,7 +79,10 @@ function ponerBolas(arbol, altura){
 }
 arbol = crearArbol(3);
 console.log(arbol);
-
+arbol2 = crearArbol(4);
+console.log(arbol2);
+arbol3 = crearArbol(6);
+console.log(arbol3);
 
 //console.clear();
 
@@ -103,7 +108,10 @@ maquina = 'piedra';
 
 while (true){
     jugador =prompt('Elige tu jugada piedra, papel o tijera, si quieres salir escribe salir: ');
-    jugador = jugador.toLowerCase();
+    if (jugador!== null){
+        jugador = jugador.toLowerCase();
+
+    }
     if (jugador === 'salir'){
         break;
     }
