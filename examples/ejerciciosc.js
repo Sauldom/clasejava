@@ -94,3 +94,4 @@ if (player1 === player2){
 }else{
     console.log(`Gana player2 con ${player2} y player1 con ${player1}`);
 }
+
