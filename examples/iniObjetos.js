@@ -91,13 +91,15 @@ function jugada (list){
 */
 //reescribir el juego de piedra papel o tijera para que devuelva un string y con objetos
 const game = (player1, player2)=>{
-    if(player1===player2) return 'Empate';
+    let player1Game = player1.play();
+    let player2Game= player2.play();
+    if(player1Game===player2Game) return 'Empate';
     var reglas ={
         piedra:'tijeras',
         papel:'piedra',
         tijera:'papel'
     };
-    if (player2===reglas[player1]){
+    if (player2Game===reglas[player1Game]){
         return 'Player1 gana';
     }else{
         return 'Player2 gana';
@@ -105,10 +107,14 @@ const game = (player1, player2)=>{
 }
 
 function Player(nombre){
-    let actions = ['piedra', 'papel', 'tijera'];
+    let actions = ['piedra', 'papel', 'tijera']; // esto hace que sea privada no se puede acceder desde fuera
     this.nombre = nombre;
     this.play = function (){
-
+        return actions[Math.floor(Math.random()*actions.length)]; // es una manera de hacer un aleatorio de 0 a 2 redondeando hacia abajo los enteros
     }
 }
-console.log(game('piedra', 'papel'));
+let player1 = new Player('jugador1');
+let player2 = new Player('jugador2');
+
+console.log(player1.play());
+console.log(game(player1, player2));
