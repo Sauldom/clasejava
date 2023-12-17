@@ -133,6 +133,7 @@ const adminUser = {
     courses: [],
     age: 43
 };
+//evitar uno de los parametros
 const getUserInfo = ({password, ...otrasProps})=> otrasProps;
     
 
