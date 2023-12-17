@@ -23,10 +23,33 @@
             console.log(info);    
         });*/
         const main = async ()=>{
-            const info =await axios.get('https://api.tvmaze.com/shows');
-            console.log(info);
+            let loading;
+            try{
+                loading = true;
+                console.log('Mostrando la pantalla de carga');
+                const info =await axios.get('https://api.tvmaze.com/shows');
+                console.log(info);
+            }catch{
+                console.log ('Ha habido un error');
+            }finally{
+                loading = false;
+                console.log('Quitando la pantalla de carga');
+            }
         };
         main();
+
+        /*
+        class User {
+            constructor (name){
+                this.name =name;
+            }
+            sayHi(){
+                console.log(this.name);
+            }
+        }
+        const testUser = newUser('Saul');
+        console.log(tesUser;)
+        */
     </script>
 
 </body>
